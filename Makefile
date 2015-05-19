@@ -18,8 +18,10 @@ all: main.pdf
 # -interactive=nonstopmode keeps the pdflatex backend from stopping at a
 # missing file reference and interactively asking you for an alternative.
 
-main.pdf: cv.tex
-	xelatex -output-dir output cv.tex
+# Have to compile twice because of the header
+main.pdf: cv_10.tex
+	xelatex -output-dir output cv_10.tex
+	xelatex -output-dir output cv_10.tex
 
 clean:
 	find ./output -iname '*.aux' | xargs rm
