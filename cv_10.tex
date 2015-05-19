@@ -1,0 +1,172 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.2 (3/5/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+
+
+\begin{document}
+
+\header{robert}{ kuska}{Software Engineer} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{contact}
+Chalupkova 159
+Cadca 02201
+Slovakia
+~
++420 775 446 230
+~
+\href{mailto:rkuska@gmail.com}{rkuska[at]gmail.com}
+\section{languages}
+slovak, czech
+english fluently
+german basics 
+\section{programming}
+{\color{red} $\varheartsuit$} Python
+Java, C, SQL
+HTML \& CSS
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2013--now}
+{Masters {\normalfont of Informatics}}
+{The Masaryk University, Brno}
+{\emph{Automatic Text Summarization}}
+
+
+%------------------------------------------------
+
+\entry
+{2009--2013}
+{Bachelor {\normalfont of Informatics}}
+{The Masaryk University, Brno}
+{\emph{Methods of automatic testing in Python language} \\ This thesis deals with the problematics of testing in Python. It contains a description of the usage and code examples of the most common freely available test libraries. The thesis is also a description of the libraries used for creating fake objects. The conclusion contains a summary of the information and comparison of performance of libraries. Selected libraries are applied to the MCC project.}
+
+
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{experience}
+
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2013--Now}
+{RED HAT}
+{Brno, Czech Republic}
+{\emph{Associate Software Engineer} \\
+Maintaining RPM packages of python and related libraries in Fedora and RHEL.\\
+Developing and maintaining RPM packages of python's related Software Collections (RHSCL).\\
+Developing following projects:
+\begin{itemize}
+\item pyp2rpm - converting PyPI packages into specfiles
+\item spec2scl - converting classic specfiles into scl specfiles
+\item scltests - framework for testing scl rpm packages
+\end{itemize}}
+
+%------------------------------------------------
+
+\entry
+{2012--2013}
+{EMBEDIT}
+{Brno, Czech Republic}
+{\emph{Software Tester} \\
+Part time job where I assisted with moving from MS Exchange to Lotus Notes.}
+
+\end{entrylist}
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{certificates}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2013}
+{Red Hat Certified System Administrator}
+{Red Hat}
+{Red Hat Enterprise Linux 6 ID:130-174-329}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{interests}
+
+\textbf{professional:} machine learning, algorithms, testing, problem-solving \textbf{personal:} reading, photography, audio, cooking, workouts
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{volunteering}
+
+\begin{entrylist}
+
+\entry
+{2014}
+{DEVCONF}
+{Brno}
+{Taking care of workshops in specific lab.}
+
+\entry
+{2015}
+{DEVCONF}
+{Brno}
+{Taking care of workshops in specific lab.}
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
