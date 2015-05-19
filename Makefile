@@ -24,11 +24,7 @@ main.pdf: cv.tex
 clean:
 	find ./output -iname '*.aux' | xargs rm
 	find ./output -iname '*.log' | xargs rm
-	find ./output -iname '*.lot' | xargs rm
 	find ./output -iname '*.out' | xargs rm
-	find ./output -iname '*.toc' | xargs rm
-	find ./output -iname '*.blg' | xargs rm
-	find ./output -iname '*.bbl' | xargs rm
-	find ./output -iname '*.lof' | xargs rm
-	find ./output -iname '*.xdv' | xargs rm
+	find ./output -iname '*.bcf' | xargs rm
+	find ./output -iname '*.run.xml' | xargs rm
 
