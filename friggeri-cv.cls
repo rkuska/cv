@@ -50,12 +50,12 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newfontfamily\bodyfont[]{Calibri}
-\newfontfamily\thinfont[]{Calibri}
-\newfontfamily\headingfont[]{Calibri Bold}
+\newfontfamily\bodyfont[]{Helvetica Neue}
+\newfontfamily\thinfont[]{Helvetica Neue}
+\newfontfamily\headingfont[]{Helvetica Neue Bold}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Calibri}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue}
 
 %\setmathfont{XITS Math}
 
@@ -287,21 +287,28 @@
 
 \DeclareNameFormat{author}{%
   \small\addfontfeature{Color=lightgray}%
-  \ifblank{#3}{}{#3\space}#1%
-  \ifthenelse{\value{listcount}<\value{liststop}}
-    {\addcomma\space}
-    {}%
-}
+  \ifgiveninits
+    {\usebibmacro{name:given-family}
+      {\namepartfamily}
+      {\namepartgiveni}
+      {\namepartprefix}
+      {\namepartsuffix}}
+    {\usebibmacro{name:given-family}
+      {\namepartfamily}
+      {\namepartgiven}
+      {\namepartprefix}
+      {\namepartsuffix}}%
+  \usebibmacro{name:andothers}}
 
 \defbibheading{bibheading}[\bibname]{%   \subsubsection*{#1}   \markboth{#1}{#1}
 }
 
-\newcommand{\printbibsection}[2]{
-  \begin{refsection}
-    \nocite{*}
-    \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=bibheading]
-  \end{refsection}
-}
+\newcommand{\printbibsection}[2]{%
+  \begin{refsection}%
+    \newrefcontext[sorting=chronological]%
+    \nocite{*}%
+    \printbibliography[type={#1}, title={#2}, heading=bibheading]%
+  \end{refsection}}
 
 \DeclareSortingScheme{chronological}{
   \sort[direction=descending]{\field{year}}
